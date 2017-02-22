@@ -67,7 +67,9 @@ const initialState = {
     }
   ],
   navStates: {
-    calculationsKey: 1
+    calculationsKey: 1,
+    navBarKey: 0,
+    navBarRightKey: 0
   }
 };
 

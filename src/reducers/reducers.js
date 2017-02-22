@@ -19,9 +19,7 @@ export function debtors(state = initialState.debtors, action) {
 export function navStates(state = initialState.navStates, action) {
 	switch (action.type) {
 		case CHANGE_NAV_KEY:
-			if (state[action.property]) {
 				return {...state, [action.property]: action.value};
-			}
 		default:
 		return state;
 	}

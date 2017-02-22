@@ -4,19 +4,19 @@ import {Link} from 'react-router';
 import {LinkContainer} from 'react-router-bootstrap';
 
 const NavigationBarView = (props) => {
-  const {calculations} = props;
+  const {itemKey, itemRightKey, onSelectItem} = props;
 
   return (
 
     <Navbar inverse fixedTop collapseOnSelect>
       <Navbar.Header>
         <Navbar.Brand>
-          <Link to="/">Time To Pay</Link>
+          <Link to="/" onClick={(e) => {onSelectItem('navBarKey', itemKey + 1)}}>Time To Pay</Link>
         </Navbar.Brand>
         <Navbar.Toggle />
       </Navbar.Header>
       <Navbar.Collapse>
-        <Nav navbar>
+        <Nav navbar onSelect={(e) => {onSelectItem('navBarKey', itemKey + 1)}}>
           <LinkContainer to="/debtors">
             <NavItem eventKey={1}>Debtors</NavItem>
           </LinkContainer>
@@ -27,8 +27,8 @@ const NavigationBarView = (props) => {
             <NavItem eventKey={3}>Contacts</NavItem>
           </LinkContainer>
         </Nav>
-        <Nav pullRight>
-          <LinkContainer to="/calculations">
+        <Nav pullRight onSelect={(e) => {onSelectItem('navBarKey', itemKey + 1)}}>
+          <LinkContainer to="/addcalculation">
             <NavItem eventKey={1}>Add Calculation</NavItem>
           </LinkContainer>
         </Nav>

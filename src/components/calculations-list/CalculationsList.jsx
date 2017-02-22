@@ -13,8 +13,8 @@ export class CalculationsListContainer extends Component {
 		super(props);
 	}
 
-	changeKey(key) {
-		this.props.onSelectItem(key);
+	changeKey(prop, key) {
+		this.props.onSelectItem(prop, key);
 	}
 
 	render() {
@@ -36,8 +36,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-	onSelectItem: (key) => {
-		dispatch(changeNavKey('calculationsKey', key));
+	onSelectItem: (prop, key) => {
+		dispatch(changeNavKey(prop, key));
 	}
 });
 

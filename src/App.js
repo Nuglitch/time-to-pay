@@ -14,15 +14,18 @@ class App extends Component {
 
   render() {
     return (
-        <div className="App">
-          <Router history={browserHistory}>
-              <Route path="/" component={Main}>
-              <Route path="calculations" component={ContentMain}>
-                <Route path="calc/:id" component={CalculationsPanel}/>
-              </Route>
+      <div className="App">
+        <Router history={browserHistory}>
+          <Route path="/" component={Main}>
+            <Route path="debtors" component={ContentMain} />
+            <Route path="calculations" component={ContentMain}>
+              <Route path="calc/:id" component={CalculationsPanel} />
             </Route>
-          </Router>
-        </div>
+            <Route path="contacts" component={ContentMain} />
+            <Route path="addcalculation" component={ContentMain} />
+          </Route>
+        </Router>
+      </div>
     );
   }
 }
