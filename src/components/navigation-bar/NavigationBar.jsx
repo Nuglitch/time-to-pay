@@ -1,7 +1,7 @@
-import React, {Component, PropTypes} from 'react';
-import {connect} from 'react-redux';
+import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
 import NavigationBarView from './NavigationBarView';
-import {changeNavKey} from '../../actions/actions.js';
+import { changeNavKey } from '../../actions/actions.js';
 
 export class NavigationBarContainer extends Component {
 
@@ -26,7 +26,7 @@ export class NavigationBarContainer extends Component {
 			<NavigationBarView
 				itemKey={itemKey}
 				itemRightKey={itemRightKey}
-				onSelectItem={this.changeKey.bind(this)}/>
+				onSelectItem={this.changeKey.bind(this)} />
 		);
 	}
 

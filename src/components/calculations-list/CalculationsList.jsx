@@ -1,7 +1,7 @@
-import React, {Component, PropTypes} from 'react';
-import {connect} from 'react-redux';
+import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
 import CalculationsListView from './CalculationsListView';
-import {changeNavKey} from '../../actions/actions.js';
+import { changeNavKey } from '../../actions/actions.js';
 
 export class CalculationsListContainer extends Component {
 
@@ -11,35 +11,32 @@ export class CalculationsListContainer extends Component {
 
 	constructor(props) {
 		super(props);
+		this.state = { itemKey: 0 };
 	}
 
-	changeKey(prop, key) {
-		this.props.onSelectItem(prop, key);
+	changeKey(key) {
+		this.setState({
+      		itemKey: key
+    	});
 	}
 
 	render() {
-		const {calculations, itemKey} = this.props;
+		const {calculations} = this.props;
 
 		return (
 			<CalculationsListView
 				calculations={calculations}
-				itemKey={itemKey}
+				itemKey={this.state.itemKey}
 				onSelectItem={this.changeKey.bind(this)} />
 		);
 	}
-
 };
 
 const mapStateToProps = (state) => ({
-	calculations: state.calculations,
-	itemKey: state.navStates.calculationsKey
+	calculations: state.calculations
 });
 
-const mapDispatchToProps = (dispatch) => ({
-	onSelectItem: (prop, key) => {
-		dispatch(changeNavKey(prop, key));
-	}
-});
+const mapDispatchToProps = (dispatch) => ({});
 
 const CalculationsList = connect(
 	mapStateToProps,

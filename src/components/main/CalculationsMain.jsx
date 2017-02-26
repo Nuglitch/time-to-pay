@@ -1,6 +1,6 @@
 import React from 'react';
 import {Grid, Col, Row} from 'react-bootstrap';
-import CalculationsList from './calculations-list/CalculationsList.jsx'
+import CalculationsList from '../calculations-list/CalculationsList.jsx'
 
 export default (props) => (
   <Grid>

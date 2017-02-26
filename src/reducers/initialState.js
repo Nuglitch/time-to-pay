@@ -51,19 +51,23 @@ const initialState = {
   contacts: [
     {
       id: '1',
-      name: 'Victor'
+      name: 'Victor',
+      alias: 'El brother'
     },
     {
       id: '2',
-      name: 'Marc'
+      name: 'Marc',
+      alias: 'El brother'
     },
     {
       id: '3',
-      name: 'Jordi'
+      name: 'Jordi',
+      alias: 'El brother'
     },
     {
       id: '4',
-      name: 'Alan'
+      name: 'Alan',
+      alias: 'El brother'
     }
   ],
   navStates: {

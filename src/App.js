@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import ContentMain from './components/ContentMain';
+import CalculationsMain from './components/main/CalculationsMain';
+import DebtorsMain from './components/main/DebtorsMain';
+import ContactsMain from './components/main/ContactsMain';
 import Main from './components/main/Main';
 import CalculationsPanel from './components/calculations-panel/CalculationsPanel';
 import { Router, Route, browserHistory } from 'react-router';
@@ -17,12 +18,12 @@ class App extends Component {
       <div className="App">
         <Router history={browserHistory}>
           <Route path="/" component={Main}>
-            <Route path="debtors" component={ContentMain} />
-            <Route path="calculations" component={ContentMain}>
+            <Route path="debtors" component={DebtorsMain} />
+            <Route path="calculations" component={CalculationsMain}>
               <Route path="calc/:id" component={CalculationsPanel} />
             </Route>
-            <Route path="contacts" component={ContentMain} />
-            <Route path="addcalculation" component={ContentMain} />
+            <Route path="contacts" component={ContactsMain} />
+            <Route path="addcalculation" component={CalculationsMain} />
           </Route>
         </Router>
       </div>
