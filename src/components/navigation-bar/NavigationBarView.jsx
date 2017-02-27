@@ -2,13 +2,14 @@ import React from 'react';
 import { Navbar, Nav, NavItem, Badge } from 'react-bootstrap';
 import { Link } from 'react-router';
 import { LinkContainer } from 'react-router-bootstrap';
+import './navigation-bar.css';
 
 const NavigationBarView = (props) => {
   const {itemKey, itemRightKey, onSelectItem} = props;
 
   return (
 
-    <Navbar inverse fixedTop collapseOnSelect>
+    <Navbar inverse collapseOnSelect>
       <Navbar.Header>
         <Navbar.Brand>
           <Link to="/" onClick={(e) => { onSelectItem('navBarKey', itemKey + 1) }}>Time To Pay</Link>

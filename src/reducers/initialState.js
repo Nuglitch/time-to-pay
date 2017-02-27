@@ -68,6 +68,66 @@ const initialState = {
       id: '4',
       name: 'Alan',
       alias: 'El brother'
+    },
+    {
+      id: '5',
+      name: 'Victor',
+      alias: 'El brother'
+    },
+    {
+      id: '6',
+      name: 'Marc',
+      alias: 'El brother'
+    },
+    {
+      id: '7',
+      name: 'Jordi',
+      alias: 'El brother'
+    },
+    {
+      id: '8',
+      name: 'Alan',
+      alias: 'El brother'
+    },
+    {
+      id: '9',
+      name: 'Victor',
+      alias: 'El brother'
+    },
+    {
+      id: '10',
+      name: 'Marc',
+      alias: 'El brother'
+    },
+    {
+      id: '11',
+      name: 'Jordi',
+      alias: 'El brother'
+    },
+    {
+      id: '12',
+      name: 'Alan',
+      alias: 'El brother'
+    },
+    {
+      id: '13',
+      name: 'Victor',
+      alias: 'El brother'
+    },
+    {
+      id: '14',
+      name: 'Marc',
+      alias: 'El brother'
+    },
+    {
+      id: '15',
+      name: 'Jordi',
+      alias: 'El brother'
+    },
+    {
+      id: '16',
+      name: 'Alan',
+      alias: 'El brother'
     }
   ],
   navStates: {

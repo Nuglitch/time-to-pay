@@ -10,7 +10,7 @@ const DebtorsListView = (props) => {
       {debtors.map((debt) => (
           <ListGroupItem onClick={(e) => { onSelectItem(debt.id) }} active={itemKey === debt.id}>
               <div>{debt.name}
-                <span pullRight>{debt.value}</span>  
+                <span>{debt.value}</span>  
               </div>            
           </ListGroupItem>))
       }
