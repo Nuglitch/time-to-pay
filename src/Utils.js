@@ -1,4 +1,3 @@
-
 export function joinArrays(firstArray, secondArray, firstKey, secondKey) {
     return firstArray.map(
         (elemFirst) => (
